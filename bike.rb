@@ -1,9 +1,6 @@
-# Bike
-
 class Bike
 
   STANDARD_WEIGHT = 200 # lbs
-  MAX_CARGO_ITEMS = 10
 
   attr_accessor :id, :color, :price, :weight, :rented, :cargo_contents
 
@@ -18,6 +15,18 @@ class Bike
 
   def rent!
     self.rented = true
+  end
+
+end
+
+class Cargo
+
+  MAX_CARGO_ITEMS = 10
+
+  attr_accessor :cargo_contents
+
+  def initialize()
+    @cargo_contents = []
   end
 
   def add_cargo(item)
